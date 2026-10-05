@@ -1,6 +1,6 @@
-import type { Transition } from 'motion/react'
+import type { Transition } from "motion/react";
 
-type Bezier = [number, number, number, number]
+type Bezier = [number, number, number, number];
 
 // Single source of truth for every duration, easing and distance used in animations
 export const motionTokens = {
@@ -38,14 +38,17 @@ export const motionTokens = {
   },
   // Milliseconds the chat "types" before each bot message
   typingDelay: 900,
-}
+};
 
 export const springs = {
-  snappy: { type: 'spring', stiffness: 300, damping: 30 },
-  gentle: { type: 'spring', stiffness: 120, damping: 14 },
-  bouncy: { type: 'spring', stiffness: 400, damping: 10 },
-  instant: { type: 'spring', stiffness: 600, damping: 35 },
-} satisfies Record<string, Transition>
+  snappy: { type: "spring", stiffness: 300, damping: 30 },
+  gentle: { type: "spring", stiffness: 120, damping: 14 },
+  bouncy: { type: "spring", stiffness: 400, damping: 10 },
+  instant: { type: "spring", stiffness: 600, damping: 35 },
+} satisfies Record<string, Transition>;
 
 // Press feedback for links and buttons
-export const pressable = { whileTap: { scale: motionTokens.scale.press }, transition: springs.snappy }
+export const pressable = {
+  whileTap: { scale: motionTokens.scale.press },
+  transition: springs.snappy,
+};
