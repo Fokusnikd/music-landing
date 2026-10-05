@@ -1,0 +1,16 @@
+Audio samples used on this page
+
+piano/    Salamander Grand Piano V3 by Alexander Holm, CC BY 3.0
+          (mp3 cut by the Tone.js project: https://tonejs.github.io/audio/salamander/)
+guitar/   Acoustic guitar from the University of Iowa Electronic Music Studios,
+          via tonejs-instruments by Nicholaus Brosowsky, CC BY 3.0
+          https://github.com/nbrosowsky/tonejs-instruments
+violin/   Violin from VSCO 2 Community Edition (Versilian Studios, CC0),
+          via tonejs-instruments by Nicholaus Brosowsky, CC BY 3.0
+ukulele/  FreePats Ukulele, recorded by Mateusz Dąbrowski, CC0
+          https://freepats.zenvoid.org/ — trimmed to 3 s and converted to mp3
+choir/    "Choir Aahs" from the Fluid R3 GM SoundFont by Frank Wen,
+          rendered per note by midi-js-soundfonts (Benjamin Gleitzman), CC BY 3.0
+          https://github.com/gleitz/midi-js-soundfonts
+
+License texts: https://creativecommons.org/licenses/by/3.0/ and https://creativecommons.org/publicdomain/zero/1.0/

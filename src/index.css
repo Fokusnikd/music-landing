@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #fff8ec;
+  --color-paper-deep: #fcecd2;
+  --color-ink: #1e2147;
+  --color-ink-soft: #565a7a;
+  /* tomato-deep and mint-deep are tuned for WCAG AA with small text; the rest are decor-only */
+  --color-tomato: #ff6b4a;
+  --color-tomato-deep: #c93a1b;
+  --color-sun: #ffc53d;
+  --color-sky: #8fd3ff;
+  --color-mint: #5fd3a8;
+  --color-mint-deep: #17775a;
+  --color-plum: #9b7bff;
+
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Unbounded', 'Nunito', ui-sans-serif, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-sun text-ink;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Five-line music staff drawn with a gradient, used as section texture */
+@utility staff-lines {
+  --staff-line: rgb(30 33 71 / 0.07);
+  background-image: linear-gradient(
+    to bottom,
+    var(--staff-line) 0 2px,
+    transparent 2px 14px,
+    var(--staff-line) 14px 16px,
+    transparent 16px 28px,
+    var(--staff-line) 28px 30px,
+    transparent 30px 42px,
+    var(--staff-line) 42px 44px,
+    transparent 44px 56px,
+    var(--staff-line) 56px 58px,
+    transparent 58px 100%
+  );
+  background-size: 100% 190px;
+  background-position: 0 60px;
+}
+
+@utility range-thumb {
+  appearance: none;
+  background: transparent;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background: var(--color-tomato-deep);
+    border: 5px solid #fff;
+    box-shadow: 0 6px 16px -6px rgb(30 33 71 / 0.5);
+    cursor: grab;
+  }
+  &::-moz-range-thumb {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background: var(--color-tomato-deep);
+    border: 5px solid #fff;
+    box-shadow: 0 6px 16px -6px rgb(30 33 71 / 0.5);
+    cursor: grab;
+  }
+}
